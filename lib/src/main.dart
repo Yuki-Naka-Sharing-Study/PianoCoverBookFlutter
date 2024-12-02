@@ -15,11 +15,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.purple,
+        ).copyWith(
+          primary: Colors.grey,
+          onPrimary: Colors.black,
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.purple, // 背景色を指定
+          selectedItemColor: Colors.white, // 選択時のアイテムの色
+          unselectedItemColor: Colors.grey, // 非選択時のアイテムの色
+        ),
       ),
       home: const MyStatefulWidget(),
     );
   }
+
 }
 
 class MyStatefulWidget extends StatefulWidget {
