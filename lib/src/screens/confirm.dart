@@ -9,8 +9,19 @@ class ConfirmScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('記録確認'),
       ),
-      body:
-      const Center(child: Text('', style: TextStyle(fontSize: 32.0))),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              '記録無し',
+            ),
+            Text(
+              'まだ何も記録されていません。',
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
